@@ -1,5 +1,7 @@
 package com.expedia.eps.github.metrics.models;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -11,36 +13,36 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(NON_NULL)
 @JsonPropertyOrder({
-    "url",
-    "id",
-    "html_url",
-    "diff_url",
-    "patch_url",
-    "issue_url",
-    "number",
-    "state",
-    "locked",
-    "title",
-    "user",
-    "body",
-    "created_at",
-    "updated_at",
-    "closed_at",
-    "merged_at",
-    "merge_commit_sha",
-    "assignee",
-    "assignees",
-    "milestone",
-    "commits_url",
-    "review_comments_url",
-    "review_comment_url",
-    "comments_url",
-    "statuses_url",
-    "head",
-    "base",
-    "_links"
+        "url",
+        "id",
+        "html_url",
+        "diff_url",
+        "patch_url",
+        "issue_url",
+        "number",
+        "state",
+        "locked",
+        "title",
+        "user",
+        "body",
+        "created_at",
+        "updated_at",
+        "closed_at",
+        "merged_at",
+        "merge_commit_sha",
+        "assignee",
+        "assignees",
+        "milestone",
+        "commits_url",
+        "review_comments_url",
+        "review_comment_url",
+        "comments_url",
+        "statuses_url",
+        "head",
+        "base",
+        "_links"
 })
 public class PullRequest {
 
@@ -112,5 +114,4 @@ public class PullRequest {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 }

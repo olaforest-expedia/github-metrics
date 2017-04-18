@@ -12,14 +12,14 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "self",
-    "html",
-    "issue",
-    "comments",
-    "review_comments",
-    "review_comment",
-    "commits",
-    "statuses"
+        "self",
+        "html",
+        "issue",
+        "comments",
+        "review_comments",
+        "review_comment",
+        "commits",
+        "statuses"
 })
 public class Links {
 
@@ -51,5 +51,4 @@ public class Links {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 }

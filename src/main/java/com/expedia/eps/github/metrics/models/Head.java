@@ -12,11 +12,11 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "label",
-    "ref",
-    "sha",
-    "user",
-    "repo"
+        "label",
+        "ref",
+        "sha",
+        "user",
+        "repo"
 })
 public class Head {
 
@@ -42,5 +42,4 @@ public class Head {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 }

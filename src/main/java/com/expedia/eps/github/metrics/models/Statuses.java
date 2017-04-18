@@ -12,7 +12,7 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "href"
+        "href"
 })
 public class Statuses {
 
@@ -30,5 +30,4 @@ public class Statuses {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 }

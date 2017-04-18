@@ -1,5 +1,7 @@
 package com.expedia.eps.github.metrics.models;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -10,13 +12,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.util.HashMap;
 import java.util.Map;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(NON_NULL)
 @JsonPropertyOrder({
-    "label",
-    "ref",
-    "sha",
-    "user",
-    "repo"
+        "label",
+        "ref",
+        "sha",
+        "user",
+        "repo"
 })
 public class Base {
 
@@ -42,5 +44,4 @@ public class Base {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 }

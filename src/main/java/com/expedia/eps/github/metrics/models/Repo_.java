@@ -1,5 +1,4 @@
-
-package com.example;
+package com.expedia.eps.github.metrics.models;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;

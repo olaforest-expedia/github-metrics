@@ -40,7 +40,6 @@ import java.util.List;
         "_links"
 })
 public class PullRequest {
-
     @JsonProperty("url")
     public String url;
     @JsonProperty("id")

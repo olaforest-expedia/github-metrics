@@ -14,7 +14,7 @@ public class GithubService {
             .decoder(new JacksonDecoder())
             .target(GithubApi.class, "https://ewegithub.sb.karmalab.net/api/v3");
 
-    public List<PullRequest> getPullRequests(Repository repo, String state) {
-        return githubApi.getPullRequests(repo.owner(), repo.name(), state);
+    public List<PullRequest> getClosedPullRequests(Repository repo) {
+        return githubApi.getPullRequests(repo.owner(), repo.fullName(), "closed");
     }
 }

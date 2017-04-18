@@ -22,5 +22,5 @@ public enum Repository {
     BnsDeliveryAgent("EWE", "eps-booking-bns-delivery-agent-service");
 
     private final String owner;
-    private final String name;
+    private final String fullName;
 }

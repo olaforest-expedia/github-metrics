@@ -1,4 +1,4 @@
-package com.expedia.eps.github.connectors;
+package com.expedia.eps.github.metrics.connectors;
 
 import com.expedia.eps.github.metrics.models.PullRequest;
 

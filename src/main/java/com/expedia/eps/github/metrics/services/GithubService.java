@@ -1,6 +1,6 @@
 package com.expedia.eps.github.metrics.services;
 
-import com.expedia.eps.github.connectors.GithubApi;
+import com.expedia.eps.github.metrics.connectors.GithubApi;
 import com.expedia.eps.github.metrics.models.PullRequest;
 import com.expedia.eps.github.metrics.support.Repository;
 

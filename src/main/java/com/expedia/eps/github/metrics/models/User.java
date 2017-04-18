@@ -1,14 +1,8 @@
 package com.expedia.eps.github.metrics.models;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -32,7 +26,6 @@ import java.util.Map;
         "ldap_dn"
 })
 public class User {
-
     @JsonProperty("login")
     public String login;
     @JsonProperty("id")
@@ -69,16 +62,4 @@ public class User {
     public Boolean siteAdmin;
     @JsonProperty("ldap_dn")
     public String ldapDn;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 }

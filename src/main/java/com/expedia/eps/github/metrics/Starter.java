@@ -19,7 +19,7 @@ public class Starter {
         stream(Repository.values())
                 .map(githubService::getClosedPullRequests)
                 .flatMap(List::stream)
-                .filter(pull -> parse(pull.createdAt).isAfter(now().minusWeeks(4)))
+                .filter(pull -> parse(pull.createdAt).isAfter(now().minusWeeks(5)))
                 .collect(toList())
                 .forEach(pull -> System.out.println("Closed: " + rightPadding(parse(pull.closedAt).toString(), 22) + "Created: " + parse(pull.createdAt).toString() + "  Duration: " + rightPadding(between(parse(pull.createdAt), parse(pull.closedAt)).toString().replace("PT", ""), 10) + "\t  #" + pull.number + "\t  Repo: " + pull.head.repo.name));
 //                .forEach(pull -> System.out.println(pull.head.repo.name));
@@ -34,7 +34,7 @@ public class Starter {
 //                .forEach(System.out::println);
     }
 
-    public static String rightPadding(String str, int num) {
+    private static String rightPadding(String str, int num) {
         return String.format("%1$-" + num + "s", str);
     }
 }
